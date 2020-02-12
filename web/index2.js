@@ -18,8 +18,19 @@ app.get("/", function(request, response) {
 app.get("/page", function(request, response) {
     response.render("page", {
         'title': 'Guest Book',
-        'subject': 'Good day out',
-        'review': 'We had a really good time visiting the museum.'
+        'entries': [{
+                'subject': 'Good day out',
+                'review': 'We had a really good time visiting the museum.'
+            },
+            {
+                "subject": "Liked the exhibition",
+                "review": "Good to see the Glasgow Boys again."
+            },
+            {
+                "subject": "Magical few hours",
+                "review": "Magnificent looking building."
+            }
+        ]
     });
 });
 
